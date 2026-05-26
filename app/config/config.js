@@ -1,5 +1,5 @@
-export const MONGODB_CONNECTION =
-  "mongodb+srv://Re_ShisTo7053R:%23CP77%237053R%23@novelty1.kr5q6zv.mongodb.net/Project1?appName=Novelty1";
+// export const MONGODB_CONNECTION =
+//   "mongodb+srv://Re_ShisTo7053R:%23CP77%237053R%23@novelty1.kr5q6zv.mongodb.net/Project1?appName=Novelty1";
 export const JWT_SECRET = "#CP77#7053R#";
 export const JWT_EXPIRES_IN = 60 * 60 * 24 * 30; // 30days
 

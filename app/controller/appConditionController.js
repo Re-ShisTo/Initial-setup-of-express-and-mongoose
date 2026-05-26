@@ -1,10 +1,8 @@
-export const condition = async () => {
+export const condition = async (req, res) => {
   try {
-    return res.json(
-      console.log({
-        msg: "OK",
-      }),
-    );
+    return res.json({
+      msg: "OK",
+    });
   } catch (error) {
     return res.json(error);
   }

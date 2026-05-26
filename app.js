@@ -1,3 +1,4 @@
+import "dotenv/config";
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
@@ -13,7 +14,6 @@ import cluster from "cluster";
 import {
   IMAGE_UPLOAD_SIZE_LIMIT,
   IMAGE_STORAGE_SUBPATH,
-  MONGODB_CONNECTION,
   MAX_JSON_SIZE,
   PORT,
   REQUEST_LIMIT_NUMBER,
@@ -51,7 +51,7 @@ app.set("etag", WEB_CACHE); // set the caches in etag
 // Database Connection
 // set autoindex for indexing in a database
 mongoose
-  .connect(MONGODB_CONNECTION, { autoIndex: true })
+  .connect(process.env.MONGO_URL, { autoIndex: true })
   .then(() => {
     console.log("Database Connection Success");
   })
