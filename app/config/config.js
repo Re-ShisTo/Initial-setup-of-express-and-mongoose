@@ -1,5 +1,5 @@
-export const MOGODB_CONNECTION =
-  "mongodb+srv://Re_ShisTo7053R:#CP77#7053R#@novelty1.kr5q6zv.mongodb.net/?appName=Novelty1";
+export const MONGODB_CONNECTION =
+  "mongodb+srv://Re_ShisTo7053R:%23CP77%237053R%23@novelty1.kr5q6zv.mongodb.net/Project1?appName=Novelty1";
 export const JWT_SECRET = "#CP77#7053R#";
 export const JWT_EXPIRES_IN = 60 * 60 * 24 * 30; // 30days
 
@@ -9,13 +9,14 @@ export const EMAIL_USER = "anil7053r@gmail.com";
 export const EMAIL_PASS = "CP77#7053R#";
 
 export const MAX_JSON_SIZE = "50mb";
-export const MAX_JSON_SIZE = true;
+// export const MAX_JSON_SIZE = true;
 
 export const REQUEST_LIMIT_TIMEOUT = 15 * 60 * 1000; // 15 minutes
 export const REQUEST_LIMIT_NUMBER = 3000; // 3000 requests per 15 minutes
 
 export const WEB_CACHE = false; // Alaways set the framwork cache to false in case of expressjs applicarions.
 export const PORT = 3000;
+export const URL_ENCODED = true; // for parsing the url encoded data in the request body
 
 export const OTP_EXPIRES_IN = 10 * 60 * 1000; // 5 minutes
 export const LOG_LEVEL = "info";

@@ -7,7 +7,7 @@ import helmet from "helmet";
 import hpp from "hpp";
 import fileUpload from "express-fileupload";
 import path from "path";
-import { fileURLPath } from "url";
+import { fileURLToPath } from "url";
 import cluster from "cluster";
 
 import {
@@ -20,8 +20,6 @@ import {
   REQUEST_LIMIT_TIMEOUT,
   WEB_CACHE,
   URL_ENCODED,
-  MAX_JSON_SIZE,
-  MOGODB_CONNECTION,
 } from "./app/config/config.js";
 import { log } from "console";
 
@@ -53,7 +51,7 @@ app.set("etag", WEB_CACHE); // set the caches in etag
 // Database Connection
 // set autoindex for indexing in a database
 mongoose
-  .connect(MOGODB_CONNECTION, { autoIndex: true })
+  .connect(MONGODB_CONNECTION, { autoIndex: true })
   .then(() => {
     console.log("Database Connection Success");
   })
@@ -62,7 +60,7 @@ mongoose
   });
 
 // Set the root directory path for any file to U/D
-const __rootDir = path.dirname(fileURLPath(import.meta.url));
+const __rootDir = path.dirname(fileURLToPath(import.meta.url));
 app.use(
   "/storage-files",
   express.static(path.join(__rootDir, IMAGE_STORAGE_SUBPATH)),
