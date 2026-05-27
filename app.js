@@ -51,7 +51,7 @@ app.set("etag", WEB_CACHE); // set the caches in etag
 // Database Connection
 // set autoindex for indexing in a database
 mongoose
-  .connect(process.env.MONGO_URL, { autoIndex: true })
+  .connect(process.env.MONGO_URL, { autoIndex: true }) //create a .env file and add your mongo url as MONGO_URL = your_mongo_url
   .then(() => {
     console.log("Database Connection Success");
   })
